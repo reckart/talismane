@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>talismane-core</artifactId>
+	<artifactId>talismane-term-extractor</artifactId>
 	<parent>
 		<groupId>com.joliciel.talismane</groupId>
 		<artifactId>talismane-parent</artifactId>
@@ -10,26 +10,33 @@
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<testSourceDirectory>srcTest</testSourceDirectory>
+		<testResources>
+			<testResource>
+				<directory>srcTest</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
 	</build>
 	<dependencies>
 		<dependency>
 			<groupId>com.joliciel.talismane</groupId>
-			<artifactId>talismane-machine-learning</artifactId>
+			<artifactId>talismane-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.joliciel.talismane</groupId>
+			<artifactId>talismane-lefff</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.joliciel.talismane</groupId>
+			<artifactId>talismane-fr</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging-api</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-		</dependency>
-		<dependency>
-		    <!-- Must be before junit! -->
 			<groupId>com.googlecode.jmockit</groupId>
 			<artifactId>jmockit</artifactId>
 			<scope>test</scope>

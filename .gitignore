@@ -9,6 +9,3 @@ dist/
 distTerminology/
 .settings
 .project
-talismane_utils/target
-talismane_core/target
-talismane_machine_learning/target
